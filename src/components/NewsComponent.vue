@@ -25,7 +25,7 @@
 
           <div class="card-news">
             <a href="https://sofutebol.live" style="color:black">
-                <img class="img-news" src="../assets/sofutebol.png" alt="News image">
+                <img class="img-news" src="" alt="News image">
                 <h4>{{ $t('sofutebol') }}</h4>
                 <i id="external-link" class="fa fa-external-link"></i>
             </a>
