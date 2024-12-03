@@ -1,8 +1,7 @@
 <template>
     <div class="news">
       <div class="cards-container">
-        <h2>News<span> gmn</span></h2>
-        <p style="font-size: 12px; margin-top:-20px; color:gray">{{ $t('newssummary') }}</p>
+      <h2><span> {{ $t('principaisvids') }}</span></h2>
   
         <div class="all-cards">
           <div
@@ -16,48 +15,47 @@
             <i id="external-link" class="fa fa-external-link"></i>
           </div>
 
-          <div class="card-news" @click="openModal('verge')">
-            <img class="img-news" src="https://cdn.vox-cdn.com/thumbor/r0zpb7jtV22KFWAHGD1q68jSqWk=/95x194:1946x1166/fit-in/1851x972/cdn.vox-cdn.com/uploads/chorus_asset/file/25681754/2004_CHORUS_LEDE2.jpg" alt="News image">
-            <h4>{{ $t('verge') }}</h4>
+        <div class="card-news" @click="openModal('google')">
+            <img class="img-news" src="" alt="News image">
+            <h4>{{ $t('google') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
-          </div>
+        </div>
           
-
           <div class="card-news">
-            <a href="https://sofutebol.live" style="color:black">
+            <a href="https://www.youtube.com/shorts/_mmnnJTAnmg" style="color:black">
                 <img class="img-news" src="" alt="News image">
-                <h4>{{ $t('sofutebol') }}</h4>
+                <h4>{{ $t('glb') }}</h4>
                 <i id="external-link" class="fa fa-external-link"></i>
             </a>
           </div>
         </div>
 
-        <div class="card-news" @click="openModal('infomoney')">
-            <img class="img-news" src="https://www.infomoney.com.br/wp-content/uploads/2021/11/economia_1609210416_0.jpg?quality=70" alt="News image">
-            <h4>{{ $t('drex') }}</h4>
+        <div class="card-news" @click="openModal('nvidia')">
+            <img class="img-news" src="" alt="News image">
+            <h4>{{ $t('nvidia') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
 
-        <div class="card-news" @click="openModal('arstech')">
-            <img class="img-news" src="https://cdn.arstechnica.net/wp-content/uploads/2024/10/abstract_cubes.jpg" alt="News image">
-            <h4>{{ $t('arstech') }}</h4>
+        <div class="card-news" @click="openModal('bitcoin')">
+            <img class="img-news" src="" alt="News image">
+            <h4>{{ $t('bitcoin') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
   
         <transition name="fade">
-          <div v-if="selectedNews === 'verge'" class="modal-overlay" @click.self="closeModal">
+          <div v-if="selectedNews === 'nvidia'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('verge') }}</h3>
+              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('nvidia') }}</h3>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    {{ $t('vergenews') }}
+                    {{ $t('nvidiasummary') }}
                 </p>
                 <p style="font-size: 10px">
-                  {{ $t('leia') }}: 
+                  Link: 
                   <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
-                  <a href="https://www.theverge.com/c/24247055/2004-tech-internet-gadgets-phones-pop-culture">https://www.theverge.com/c/24247055/2004-tech-internet-gadgets-phones-pop-culture</a>
+                  <a href="https://www.youtube.com/shorts/uNfgsziy4Ds">https://www.youtube.com/shorts/uNfgsziy4Ds</a>
                 </p>
               </div>
             </div>
@@ -65,20 +63,20 @@
         </transition>
 
         <transition>
-          <div v-if="selectedNews === 'infomoney'" class="modal-overlay" @click.self="closeModal">
+          <div v-if="selectedNews === 'google'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('drex') }}</h3>
+              <h3 class="modal-title">{{ selectedNews.title }}{{ $t('google') }}</h3>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    {{ $t('drexnews') }}
+                    {{ $t('googlesummary') }}
                 </p>
                 <p style="font-size: 10px">
                   {{ $t('leia') }}: 
                   <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
-                  <a href="https://www.infomoney.com.br/guias/drex-real-digital/">
-                    https://www.infomoney.com.br/guias/drex-real-digital/</a>
+                  <a href="https://www.youtube.com/shorts/F_tWg3vJSb8">
+                    https://www.youtube.com/shorts/F_tWg3vJSb8</a>
                 </p>
               </div>
             </div>
@@ -86,19 +84,20 @@
         </transition>
 
         <transition>
-          <div v-if="selectedNews === 'arstech'" class="modal-overlay" @click.self="closeModal">
+          <div v-if="selectedNews === 'bitcoin'" class="modal-overlay" @click.self="closeModal">
             <div class="modal">
               <button @click="closeModal" class="close-button">&times;</button>
-              <h3 class="modal-title">{{ selectedNews.title }} {{ $t('arstech') }}</h3>
+              <h3 class="modal-title">{{ selectedNews.title }} {{ $t('bitcoin') }}</h3>
               <div class="modal-content">
                 <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
-                    {{ $t('arstechnews') }}                </p>
+                    {{ $t('bitcoinsummary') }}
+                </p>
                 <p style="font-size: 10px">
-                  {{ $t('leia') }}: 
+                  Link: 
                   <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
-                  <a href="https://arstechnica.com/ai/2024/10/cheap-ai-video-scraping-can-now-extract-data-from-any-screen-recording/">
-                    https://arstechnica.com/ai/2024/10/cheap-ai-video-scraping-can-now-extract-data-from-any-screen-recording/</a>
+                  <a href="https://youtube.com/shorts/33yHVOXiA_8">
+                    https://youtube.com/shorts/33yHVOXiA_8</a>
                 </p>
               </div>
             </div>

@@ -5,22 +5,27 @@
       <div class="profile-img">
         <img src="https://avatars.githubusercontent.com/u/188633910?v=4" alt="Foto de Perfil" class="evt-img">
       </div>
-      <h1>blackbird</h1>
+      <div class="me">
+        <h1>blackbird</h1>
+        <a style="display:flex; align-items:center; justify-content: center" href="https://youtube.com/@blackbirdsrn?sub_confirmation=1">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="30px" style="padding-right:5px"/><p>@blackbirdsrn</p>
+        </a>
+      </div>
 
       <p class="contact">
         <!-- Botão de escolha de idioma -->
         <label class="language-switcher">
           <input type="checkbox" v-model="isEnglish" @change="toggleLanguage">
           <span class="slider round"></span>
-          <span class="select-ptbr"><img src="https://cdn-icons-png.flaticon.com/512/555/555417.png" width="20px" height="20px"/></span>
-          <span class="select-en"><img src="https://cdn-icons-png.flaticon.com/128/630/630591.png" width="21px" height="21px"/></span>
+          <span class="select-en"><img src="https://cdn-icons-png.flaticon.com/512/555/555417.png" width="20px" height="20px"/></span>
+          <span class="select-ptbr"><img src="https://cdn-icons-png.flaticon.com/128/630/630591.png" width="21px" height="21px"/></span>
         </label>
 
       </p>
     </div>
     <!--<div class="links">
       <a href="https://github.com/"><button class="link-btn"><i class="fa-brands fa-github"></i> GitHub</button></a>
-      <!--<button @click="openModal('Portfólio')" class="link-btn"><i class="fa-solid fa-briefcase"></i> Portfólio</button>
+      <button @click="openModal('Portfólio')" class="link-btn"><i class="fa-solid fa-briefcase"></i> Portfólio</button>
       <a href="https://dev.to/"><button class="link-btn"><i class="fa-brands fa-dev"></i> dev.to</button></a>
     </div>
     -->
@@ -76,8 +81,9 @@ export default {
       this.selectedLink = null;
     },
     toggleLanguage() {
-      const newLanguage = this.currentLanguage === 'en' ? 'pt' : 'en';
+      const newLanguage = this.currentLanguage === 'pt' ? 'en' : 'pt';
       this.$i18n.locale = newLanguage;
+      console.log(newLanguage)
       localStorage.setItem('language', newLanguage);
     }
   }
@@ -94,12 +100,14 @@ export default {
 /* Perfil e Links em Layout Desktop */
 .profile {
   text-align: center;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
 .profile h1 {
   font-family: 'Ubuntu', sans-serif;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: -5px;
   font-size: 20px;
   color: white;
 }
@@ -108,6 +116,7 @@ export default {
   font-family: 'Ubuntu', sans-serif;
   font-style: italic;
   color: #931010;
+  font-size: 10px;
 }
 
 .profile-img {
@@ -115,10 +124,10 @@ export default {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background: linear-gradient(4deg, red, yellow, #e6530e, #ed232a, #ed232a, #db0909, red);
-  border: 2px solid transparent;
-  overflow: hidden; /* Esconde partes do pseudo-elemento que saem do círculo */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar um efeito de destaque */
+  /*background: linear-gradient(4deg, red, yellow, #e6530e, #ed232a, #ed232a, #db0909, red);*/
+  /*border: 2px solid transparent;*/
+  /*overflow: hidden; / Esconde partes do pseudo-elemento que saem do círculo */
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar um efeito de destaque */
 }
 
 .evt-img {
@@ -263,6 +272,7 @@ a {
   font-size: 12px;
   float: right;
   border: 1px solid black;
+  border-radius: 50px;
 }
 
 .email-btn:hover {
@@ -302,8 +312,8 @@ a {
 
   .contact {
     font-size: 40px;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .links {

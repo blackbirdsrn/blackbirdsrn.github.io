@@ -8,7 +8,7 @@
         >
           <div class="card-content">
             <div class="clonett">
-                <img src="https://avatars.githubusercontent.com/u/114461163?v=4" alt="Foto de Perfil" class="evtt">
+                <img src="https://avatars.githubusercontent.com/u/188633910?v=4" alt="Foto de Perfil" class="evtt">
                 <h3>@blackbirdsrn</h3>
                 
             </div>
@@ -40,10 +40,9 @@
     data() {
       return {
         messages: [
-          { message_id: "#tech", text: this.$t('aboutme', { email: '@outlook.com' }) },
-          { message_id: "#goal", text: this.$t('sofutebas') },
-          { message_id: "", text: this.$t('precofipe') },
-          { message_id: "", text: this.$t('devto') },
+          { message_id: "#tech", text: this.$t('telegram', { email: '@outlook.com' }) },
+          { message_id: "#youtube", text: this.$t('youtube') },
+          { message_id: "", text: this.$t('medias') },
         ],
       };
     },
@@ -59,10 +58,9 @@
         },
         updateMessages() {
             // Atualiza as traduções das mensagens
-            this.messages[0].text = this.$t('aboutme', { email: '@outlook.com' });
-            this.messages[1].text = this.$t('sofutebas');
-            this.messages[2].text = this.$t('precofipe');
-            this.messages[3].text = this.$t('devto');
+            this.messages[0].text = this.$t('telegram', { email: '@outlook.com' });
+            this.messages[1].text = this.$t('youtube');
+            this.messages[2].text = this.$t('medias');
 
         }
     },
@@ -131,6 +129,13 @@
 
 /* Estilização para dispositivos móveis */
 @media (max-width: 600px) {
+  .slider-container {
+    margin-top: 50px;
+    margin-left: -30px;
+    margin-right: -20px;
+    margin-bottom: -30px;
+  }
+
   .card {
     min-width: 250px;
     padding: 20px;
@@ -143,6 +148,7 @@
 
   .card-content p {
     font-size: 0.8rem;
+    color: #383838;
   }
 }
 </style>
