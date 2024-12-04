@@ -16,14 +16,14 @@
           </div>
 
         <div class="card-news" @click="openModal('google')">
-            <img class="img-news" src="" alt="News image">
+            <img class="img-news" src="https://standfirst-designweek-production.imgix.net/uploads/2015/03/spotify.gif?fit=crop&crop=faces&q=80&auto=compress,format&w=364&h=291&dpr=2.625" alt="@blackbirdsrn">
             <h4>{{ $t('google') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
           
           <div class="card-news">
             <a href="https://www.youtube.com/shorts/_mmnnJTAnmg" style="color:black">
-                <img class="img-news" src="" alt="News image">
+                <img class="img-news" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4I2unW5AuZJpdOeEYrjXLfquvseTp1qD5zw&s" alt="@blackbirdsrn">
                 <h4>{{ $t('glb') }}</h4>
                 <i id="external-link" class="fa fa-external-link"></i>
             </a>
@@ -31,13 +31,13 @@
         </div>
 
         <div class="card-news" @click="openModal('nvidia')">
-            <img class="img-news" src="" alt="News image">
+            <img class="img-news" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwa3cTnrdtdGcHzGnGQj6CuZdKm_VVE3pDSQ&s" alt="@blackbirdsrn">
             <h4>{{ $t('nvidia') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
 
         <div class="card-news" @click="openModal('bitcoin')">
-            <img class="img-news" src="" alt="News image">
+            <img class="img-news" src="https://static.vecteezy.com/system/resources/previews/030/314/348/large_2x/close-up-of-bitcoin-crypto-currency-vertical-mobile-wallpaper-ai-generated-free-photo.jpg" alt="@blackbirdsrn">
             <h4>{{ $t('bitcoin') }}</h4>
             <i id="external-link" class="fa fa-external-link"></i>
         </div>
@@ -48,7 +48,7 @@
               <button @click="closeModal" class="close-button">&times;</button>
               <h3 class="modal-title">{{ selectedNews.title }}{{ $t('nvidia') }}</h3>
               <div class="modal-content">
-                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
+                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> @blackbirdsrn{{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
                     {{ $t('nvidiasummary') }}
                 </p>
@@ -68,12 +68,12 @@
               <button @click="closeModal" class="close-button">&times;</button>
               <h3 class="modal-title">{{ selectedNews.title }}{{ $t('google') }}</h3>
               <div class="modal-content">
-                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
+                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> @blackbirdsrn{{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
                     {{ $t('googlesummary') }}
                 </p>
                 <p style="font-size: 10px">
-                  {{ $t('leia') }}: 
+                  Link: 
                   <!--<a :href="selectedNews.urlNews" target="_blank">{{ selectedNews.urlNews }}</a>-->
                   <a href="https://www.youtube.com/shorts/F_tWg3vJSb8">
                     https://www.youtube.com/shorts/F_tWg3vJSb8</a>
@@ -89,7 +89,7 @@
               <button @click="closeModal" class="close-button">&times;</button>
               <h3 class="modal-title">{{ selectedNews.title }} {{ $t('bitcoin') }}</h3>
               <div class="modal-content">
-                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> {{ $t('badgeia') }}</span>
+                <span id="badge-ia"><i class="fa-solid fa-microchip"></i> @blackbirdsrn{{ $t('badgeia') }}</span>
                 <p style="font-size: 14px">{{ selectedNews.summary }} 
                     {{ $t('bitcoinsummary') }}
                 </p>

@@ -7,7 +7,7 @@ import router from './router'
 // Defina as traduções para cada idioma
 const messages = {
   en: {
-    telegram: "Access the channel {blackbird}srn on <a href='https://t.me/ LjTe1cdGQEs5OTcx' target='_blank'>Telegram</a>. <br><button class='email-btn'><a href='t.me/ LjTe1cdGQEs5OTcx' target='_blank'> <i class='fab fa-telegram-plane' style='font-size:30px'> </i></a></button>",
+    telegram: "Access the channel {blackbird} on <a href='https://t.me/ LjTe1cdGQEs5OTcx' target='_blank'>Telegram</a>. <br><button class='email-btn'><a href='t.me/ LjTe1cdGQEs5OTcx' target='_blank'> <i class='fab fa-telegram-plane' style='font-size:30px'> </i></a></button>",
     youtube: "Help the channel grow on YouTube, subscribe! <br><br><a style='color:black; display:flex; align-items:center; justify-content: center'color:black;  href='https://youtube.com/{blackbird}?sub_confirmation=1'><img src='https://cdn-icons-png.flaticon.com/512/1384/1384060.png' width='30px' style='padding-right:5px'/> {blackbird}</a>",
     medias: "Diverse and useful topics (Sports, Artificial Intelligence, Economy, and Finance) in the context of Technology. Social media: <h3>{blackbird}</h3>",
     principaisvids: "Principais vídeos",

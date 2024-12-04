@@ -41,8 +41,8 @@
       return {
         messages: [
           { message_id: "#tech", text: this.$t('telegram', { blackbird: '@blackbirdsrn' }) },
-          { message_id: "#youtube", text: this.$t('youtube') },
-          { message_id: "", text: this.$t('medias') },
+          { message_id: "#youtube", text: this.$t('youtube', { blackbird: '@blackbirdsrn' }) },
+          { message_id: "", text: this.$t('medias', { blackbird: '@blackbirdsrn' }) },
         ],
       };
     },
@@ -58,9 +58,9 @@
         },
         updateMessages() {
             // Atualiza as traduções das mensagens
-            this.messages[0].text = this.$t('telegram', { blackbird: '@blackbirdsrn' });
-            this.messages[1].text = this.$t('youtube');
-            this.messages[2].text = this.$t('medias');
+            this.messages[0].text = this.$t('telegram', { blackbird: '@blackbirdsrn' })
+            this.messages[1].text = this.$t('youtube', { blackbird: '@blackbirdsrn' })
+            this.messages[2].text = this.$t('medias', { blackbird: '@blackbirdsrn' })
 
         }
     },
